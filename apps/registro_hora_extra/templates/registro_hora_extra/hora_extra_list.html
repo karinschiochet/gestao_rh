@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    Banco de Horas
+<br>
+    {% for hora_extra in object_list %}
+    {{ hora_extra }} <br>
+{% comment %}
+<!--       <a href="{% url 'funcionario_update'  funcionario.id %}"> {{ funcionario }} </a><br>-->
+<!--        <a href="{% url 'funcionario_delete' funcionario.id %}">Deletar</a>-->
+{% endcomment %}
+
+    {% endfor %}
+
+{% comment %}
+<!--<a class="btn btn-info" href="{% url 'funcionario_create' %}">Novo</a>-->
+{% endcomment %}
+{% endblock %}

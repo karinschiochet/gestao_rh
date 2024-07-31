@@ -6,4 +6,14 @@
     {{ form }}
     <button type="submit">Salvar</button>
     </form>
+<br>
+{{ object.id }}
+<a href="{% url 'documento_create' object.id %}"  class='btn btn-success'>
+    Adicionar Documento
+</a>
+{% for documento in object.documento_set.all %}
+<br>
+<a href="{{ documento.arquivo.url }}">{{ documento }}</a>  <br>
+{% endfor%}
+
 {% endblock %}
